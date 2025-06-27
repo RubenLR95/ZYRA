@@ -1,5 +1,19 @@
+
+<!-- CABECERA DE PÁGINA SIEMPRE FIJO -->
 <app-header></app-header>
 
-<router-outlet />
+<!-- AREA PRINCIPAL QUE CONTIENE EL CHAT Y LO CENTRA VERTICAL Y HORIZONTALMENTE EN EL CENTRO DE LA PAGINA -->
+<main class="main-content">
 
+    <!-- wrapper : PARA QUE EL CHAT TENGA UN ANCHO MÁXIMO Y ALTURA COMPLETA -->
+
+    <div class="chat-wrapper">
+        <router-outlet />
+    </div>
+
+
+
+</main>
+
+<!-- PIE DE PÁGINA FIJO DE LA APLICACIÓN -->
 <app-footer></app-footer>

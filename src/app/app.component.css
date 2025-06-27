@@ -1,0 +1,23 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content{
+    flex: 1; /*OCUPA EL ESPACIO RESTANTE EEN TRE EL FOOTER Y EL HEADER*/
+    display: flex; /* PARA CENTRAR EL CONTENIDO */
+    justify-content: center; /* CENTRA HORIZONTALMENTE LOS HIJOS */
+    align-items: flex-start; /* ALINEA LOS HIJOS AL INICIO VERTICAL (PARTE SUPERIOR)*/
+    padding: 1rem;
+    overflow: hidden; /* EVITA SCROLL INTERNO EN EL AREA  PRINCIPAL */
+}
+
+.chat-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+}
