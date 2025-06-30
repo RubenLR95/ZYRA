@@ -1,2 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import "primeicons/primeicons.css";
+
+
+
+/* 2) Layout base de la aplicación */
+body {
+  font-family: 'IM Fell English', serif;
+  background-color: #f5ecd9;
+  color: #2d1b0e;
+
+}
+:host {
+  display: flex;                       /* Flex container vertical */
+  flex-direction: column;              /* Columnas: header, main, footer */
+  height: 100vh;                       /* Altura completa de la ventana */
+  overflow: hidden;                    /* Evita scroll global */
+}
+.main-content {
+  flex: 1;                             /* Ocupa espacio restante */
+  
+  overflow: hidden;                    /* Evita scroll interno */
+}
+
+/* 3) Sobrescrituras de estilos PrimeNG para adaptarse al tema */
+.p-menubar,
+.p-toolbar {
+  background-color: rgba(122, 103, 70, 0.5) !important; /* Fondo de menús y toolbars */
+  border-radius: 3rem !important;
+  border: transparent;
+}
+button[pButton] {
+  background: rgba(122, 103, 70, 0.5); /* Botones primarios */
+ 
+  color:rgb(0, 0, 0)  !important;
+}
+.p-card {
+  background:   rgba(122, 103, 70, 0.5)!important; /* Tarjetas de contenido */
+  color:     white     !important;
+  border: transparent !important;
+  
+}
+
+/* 4) Animaciones y utilidades compartidas */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); } /* Fade in desde abajo */
+  to   { opacity: 1; transform: translateY(0); }
+}
+.spinner-overlay {
+  position: absolute;                 /* Cubre todo el contenedor */
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;                      /* Centra spinner */
+  align-items: center;
+  justify-content: center;
+  background: #7D9FB0;    /* Fondo semitransparente */
+}
+
+/* 5) Estilos de mensajes genéricos */
+.message {
+  animation: fadeInUp 0.2s ease-out;  /* Animación al aparecer cada mensaje */
+  margin-bottom: 0.75rem;             /* Separación entre mensajes */
+}
+.message-body {
+  background: rgba(122, 103, 70, 0.5);         /* Fondo de burbuja de mensaje */
+  color: #7C5B3E;
+  padding: 0.5rem 1rem;               /* Espaciado interno del mensaje */
+  border-radius: 0.5rem;              /* Borde redondeado */
+  border: rgb(0, 0, 0, 0,1);
+}
+
+/* 6) Área de entrada de texto */
+.input-area {
+  display: flex;
+  gap: 0.5rem;                        /* Espacio entre input y botón */
+  padding: 1rem;                      /* Espaciado interno */
+  border-top: transparent;
+  background: rgba(0, 0, 0, 0.7);
+  
+}
+.input-area input[pInputText] {
+  flex: 1;                            /* Ocupa espacio restante */
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  border: transparent !important;
+}
+.input-area button[pButton] {
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 111, 135))  !important;
+ color: white !important;
+}
+
+/* 7) Ajustes responsivos genéricos */
+@media (max-width: 640px) {
+  .chat-card {
+    width: calc(100% - 1rem);         /* Margen en móviles */
+    margin: 0.5rem;
+    height: calc(100vh - 120px);      /* Ajusta altura del chat */
+  }
+}
+
+

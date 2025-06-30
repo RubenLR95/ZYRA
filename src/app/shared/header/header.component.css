@@ -1,23 +1,41 @@
-/* ESTILOS GENERALES PARA EL HEADER */
-
-:host ::ng-deep .app-toolbar{
-
-    position: relative; /* ESTO PERMITE POSICIONAR ELEMENTOS HIJOS EN FORMA ABSOLUTA, SIN SUPERPONERSE UNOS TRAS OTROS*/
-    display: flex !important; /* !important PARA QUE PREVALEZCA SOBRE LOS ESTILOS DE SERIE DE ANGULAR*/
-    align-items: center !important;
-    justify-content: flex-end !important;
-    height: 4rem;
-    padding: 0 1rem;
-
+:host ::ng-deep .app-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 1 rem;
+  background: rgba(66, 44, 24, 0.85);
+  border-bottom: 2px solid #d8c5a3;
+  font-family: 'Georgia', serif;
+  color: #f5f0e6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 4rem;
+  position:relative;
 }
 
-/* ESTILOS DEL TÍTULO */
-
-.toolbar-title{
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0;
+.logo {
+  filter: sepia(0.5) contrast(1.2);
 }
 
+.toolbar-title {
+    font-family: 'Garamond', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-left: 1rem;
+  color: #f3e9d2;
+  text-shadow: 1px 1px 2px #3e2c1a;
+  flex-grow: 1;
+}
 
+.toolbar-left,
+.toolbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-center {
+  flex: 2;
+  text-align: center;
+}
 

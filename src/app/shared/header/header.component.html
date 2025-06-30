@@ -1,26 +1,15 @@
-<!-- ESTRUCTURA DEL HEADER -->
-
-<!-- HEMOS CREADO UN TOOLBAR -->
-
 <p-toolbar class="app-toolbar">
-                <!-- ESTE ES EL LOGO DE LA APPLICACION -->
-    <img src="/assets/multimedia/logo/logo.png" alt="ZYRA" height="32">
-                <!-- TÍTULO DE LA APLICACIÓN -->
-    <span class="toolbar-title"><img src="/assets/multimedia/logo/nombre.png" alt="ZYRA"></span>
+  <div class="toolbar-left">
+    <img class="logo" src="/assets/multimedia/logo/logo.png" alt="ZYRA" height="40">
+  </div>
 
-                <!-- BOTÓN PARA ALTERNAR EL TEMA CLARO/OSCURO
-                    pButton : DIRECTIVA DE PrimeNG PAA APLICAR ESTILOS AL BOTÓN
-                    PRipple : DIRECTIVA DE PrimeNG PARA EFECTO VISUAL ( (click)="ToggleTheme()" )DEL CLICK
-                    toggleTheme : ES UN METODO DEL COMPONENTE TypeScript PARA ALTERNAR DE CLARO A OSCURO -->
-    <button         
-    pButton
-    PRipple
-    type="button"
-    (click)="toggleTheme()" >
+  <div class="toolbar-center">
+    <span class="toolbar-title">ZYRA</span>
+  </div>
 
-<!-- ICONO Y TEXTO DINÁMICO SEGÚN EL ESTADO DEL DARKMODE -->
-    {{ darkMode ? '☀️ ' : '🌙 ' }}          
+  <div class="toolbar-right">
+    <button pButton PRipple type="button" (click)="toggleTheme()">
+      {{ darkMode ? '☀️ ' : '🌙 ' }}
     </button>
-
-
+  </div>
 </p-toolbar>

@@ -1,7 +1,11 @@
-:host ::ng-deep .app-toolbar.footer{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 4rem;
-    padding: 0 1rem;
+:host ::ng-deep .app-toolbar.footer {
+  background: rgba(66, 44, 24, 0.85);
+  color: #f3e9d2;
+  font-family: 'Georgia', serif;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 3rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #d8c5a3;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }

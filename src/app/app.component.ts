@@ -1,20 +1,26 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
-    RouterOutlet, 
-    ButtonModule,
+    CommonModule,
+    RouterOutlet,
+    CardModule,
     HeaderComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Zyra';
+  title = 'thinkia';   // << Añadido para el test
 }
+
+
